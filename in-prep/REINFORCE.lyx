@@ -1,0 +1,6446 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+\usetheme{CambridgeUS} 
+\beamertemplatenavigationsymbolsempty
+
+
+% Set Color ==============================
+\definecolor{BBGblue}{RGB}{13,157,219}
+\definecolor{BBGgreen}{RGB}{77,170,80}
+
+
+\setbeamercolor{title}{fg=BBGblue}
+%\setbeamercolor{frametitle}{fg=BBGblue}
+\setbeamercolor{frametitle}{fg=BBGblue}
+
+\setbeamercolor{background canvas}{fg=BBGblue, bg=white}
+\setbeamercolor{background}{fg=black, bg=BBGblue}
+
+\setbeamercolor{palette primary}{fg=black, bg=gray!30!white}
+\setbeamercolor{palette secondary}{fg=black, bg=gray!20!white}
+\setbeamercolor{palette tertiary}{fg=black, bg=BBGblue}
+
+\setbeamertemplate{headline}{}
+
+\setbeamercolor{parttitle}{fg=BBGblue}
+\setbeamercolor{sectiontitle}{fg=BBGblue}
+\setbeamercolor{sectionname}{fg=BBGblue}
+\setbeamercolor{section page}{fg=BBGblue}
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+\setbeamercolor{section title}{fg=BBGblue}
+ \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\usebeamercolor[fg]{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+\end_preamble
+\options aspectratio=169,handout
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "eulervm" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "allcolors=BBGblue,urlcolor=BBGgreen"
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\boxbgcolor #ff31d8
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\reals}{\mathbf{R}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\integers}{\mathbf{Z}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\naturals}{\mathbf{N}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\rationals}{\mathbf{Q}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\ca}{\mathcal{A}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\cb}{\mathcal{B}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\cc}{\mathcal{C}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\cd}{\mathcal{D}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\ce}{\mathcal{E}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\cf}{\mathcal{F}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\cg}{\mathcal{G}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\ch}{\mathcal{H}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\ci}{\mathcal{I}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\cj}{\mathcal{J}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\ck}{\mathcal{K}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\cl}{\mathcal{L}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\cm}{\mathcal{M}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\cn}{\mathcal{N}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\co}{\mathcal{O}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\cp}{\mathcal{P}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\cq}{\mathcal{Q}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\calr}{\mathcal{R}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\cs}{\mathcal{S}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\ct}{\mathcal{T}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\cu}{\mathcal{U}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\cv}{\mathcal{V}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\cw}{\mathcal{W}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\cx}{\mathcal{X}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\cy}{\mathcal{Y}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\cz}{\mathcal{Z}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\ind}[1]{1(#1)}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+newcommand{
+\backslash
+pr}{P}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\pr}{\mathbb{P}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\predsp}{\cy}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%{
+\backslash
+hat{
+\backslash
+cy}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\outsp}{\cy}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\prxy}{P_{\cx\times\cy}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\prx}{P_{\cx}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\prygivenx}{P_{\cy\mid\cx}}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+newcommand{
+\backslash
+ex}{E}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ex}{\mathbb{E}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\var}{\textrm{Var}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\cov}{\textrm{Cov}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\sgn}{\textrm{sgn}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\sign}{\textrm{sign}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\kl}{\textrm{KL}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\law}{\mathcal{L}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\eps}{\varepsilon}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\as}{\textrm{ a.s.}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\io}{\textrm{ i.o.}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\ev}{\textrm{ ev.}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\convd}{\stackrel{d}{\to}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\eqd}{\stackrel{d}{=}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\del}{\nabla}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\loss}{\ell}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\risk}{R}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\emprisk}{\hat{R}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\lossfnl}{L}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\emplossfnl}{\hat{L}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\empminimizer}[1]{\hat{#1}^{*}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\minimizer}[1]{#1^{*}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\optimizer}[1]{#1^{*}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\etal}{\textrm{et. al.}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\tr}{\operatorname{tr}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\trace}{\operatorname{trace}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\diag}{\text{diag}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\rank}{\text{rank}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\linspan}{\text{span}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\spn}{\text{span}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\proj}{\text{Proj}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\argmax}{\operatornamewithlimits{arg\, max}}
+{\text{argmax}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\argmin}{\operatornamewithlimits{arg\, min}}
+{\text{argmin}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\bfx}{\mathbf{x}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\bfy}{\mathbf{y}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\bfl}{\mathbf{\lambda}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\bfm}{\mathbf{\mu}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\calL}{\mathcal{L}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vw}{\boldsymbol{w}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\vx}{\boldsymbol{x}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\vxi}{\boldsymbol{\xi}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\valpha}{\boldsymbol{\alpha}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\vbeta}{\boldsymbol{\beta}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\vsigma}{\boldsymbol{\sigma}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\vtheta}{\boldsymbol{\theta}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\vd}{\boldsymbol{d}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\vs}{\boldsymbol{s}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\vt}{\boldsymbol{t}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\vh}{\boldsymbol{h}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\ve}{\boldsymbol{e}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\vf}{\boldsymbol{f}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\vg}{\boldsymbol{g}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\vz}{\boldsymbol{z}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\vk}{\boldsymbol{k}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\va}{\boldsymbol{a}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\vb}{\boldsymbol{b}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\vv}{\boldsymbol{v}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\vy}{\boldsymbol{y}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\dom}{\textrm{\textbf{dom} }}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\rank}{\text{\textbf{rank }}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\conv}{\textrm{\textbf{conv} }}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\relint}{\text{\textbf{relint }}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\aff}{\text{\textbf{aff }}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\hil}{\ch}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\rkhs}{\hil}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\ber}{\text{Ber}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+REINFORCE
+\end_layout
+
+\begin_layout Author
+David S.
+ Rosenberg 
+\end_layout
+
+\begin_layout Date
+November 25, 2019
+\end_layout
+
+\begin_layout Institute
+Bloomberg ML EDU
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ArticleMode
+status open
+
+\begin_layout Plain Layout
+Just in article version
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+let
+\backslash
+thefootnote
+\backslash
+relax
+\backslash
+footnotetext{
+\backslash
+tiny{Plots courtesy of Ningshan Zhang.}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Reinforcement Learning: What's it good for?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Applications of reinforcement learning:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Video game playing
+\end_layout
+
+\begin_layout Itemize
+Self-driving cars
+\end_layout
+
+\begin_layout Itemize
+Go, Chess, Checkers, etc.
+\end_layout
+
+\begin_layout Itemize
+Dialogue systems
+\end_layout
+
+\begin_deeper
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+What do these things have in common?
+\end_layout
+
+\begin_deeper
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Agent must decide what to do next, but there isn't always a single right
+ answer.
+\end_layout
+
+\begin_deeper
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+We often cannot directly assess performance of a single action, but only
+ a whole sequence of actions.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+in a game, did we win or lose?
+\end_layout
+
+\begin_deeper
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+did the car crash or successfully reach its destination?
+\end_layout
+
+\begin_deeper
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+did the customer in the dialogue system click 
+\begin_inset Quotes eld
+\end_inset
+
+yes – I am satisfied with this AI interaction
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+RL Techniques for Supervised Learning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+More recently, RL is being applied to supervised learning problems.
+\end_layout
+
+\begin_deeper
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+With RL, we can handle non-differentiable or black-box loss functions.
+\end_layout
+
+\begin_deeper
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+With RL, we eliminate the 
+\begin_inset Quotes eld
+\end_inset
+
+exposure bias
+\begin_inset Quotes erd
+\end_inset
+
+ problem we get in learning sequence generators
+\end_layout
+
+\begin_deeper
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Perhaps it's also improving results when there are multiple right answers.
+\end_layout
+
+\begin_deeper
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Today we'll discuss a particular algorithm for RL called REINFORCE.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Contents
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sequence of Events
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+Many problem domains can be formalized as follows:
+\end_layout
+
+\begin_layout Enumerate
+Observe input 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Take action 
+\begin_inset Formula $a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Observe label/outcome/output 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Evaluate action in relation to the outcome (via a 
+\series bold
+loss function
+\series default
+
+\begin_inset Formula $\ell(a,y)$
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Plain Layout
+Implicit assumptions:
+\end_layout
+
+\begin_layout Itemize
+loss function 
+\begin_inset Formula $\ell(a,y)$
+\end_inset
+
+ 
+\series bold
+is a known function
+\series default
+ 
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Highly Simplified RL Setup
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Review: Supervised Learning Framework
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+The Spaces
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+.3
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\cx$
+\end_inset
+
+: input space
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+.3
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\cy$
+\end_inset
+
+: outcome space 
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+.3
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\ca$
+\end_inset
+
+: action space
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Prediction Function (or 
+\begin_inset Quotes eld
+\end_inset
+
+decision function
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+A 
+\series bold
+prediction function 
+\series default
+(or 
+\series bold
+decision function
+\series default
+) gets input 
+\begin_inset Formula $x\in\cx$
+\end_inset
+
+ and produces an action 
+\begin_inset Formula $a\in\ca$
+\end_inset
+
+ :
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{matrix}f: & \cx & \rightarrow & \ca\\
+\pause & x & \mapsto & f(x)
+\end{matrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Loss Function
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+A 
+\series bold
+loss function
+\series default
+ evaluates an action in the context of the outcome 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{matrix}\loss: & \ca\times\cy & \rightarrow & \reals\\
+\pause & (a,y) & \mapsto & \loss(a,y)
+\end{matrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Not sure we want loss to be nonnegative – what about log loss?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Review: Risk Minimization
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+The 
+\series bold
+risk
+\series default
+\emph on
+ 
+\emph default
+of a prediction function 
+\begin_inset Formula $f:\cx\to\ca$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+R(f)=\ex\loss(f(x),y).
+\]
+
+\end_inset
+
+In words, it's the 
+\series bold
+expected loss
+\series default
+ of 
+\begin_inset Formula $f$
+\end_inset
+
+ on a new exampe 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ drawn randomly from 
+\begin_inset Formula $P_{\cx\times\cy}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Ideally, we'd find a 
+\series bold
+Bayes prediction function
+\series default
+ that achieves the 
+\emph on
+minimal risk
+\emph default
+ among all possible functions: 
+\begin_inset Formula 
+\[
+\minimizer f\in\argmin_{f}R(f).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Simplified RL Setup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+The Spaces
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+.3
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\cx$
+\end_inset
+
+: input space
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+.3
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\ca$
+\end_inset
+
+: action space 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Policy
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+A 
+\series bold
+policy 
+\series default
+takes input 
+\begin_inset Formula $x\in\cx$
+\end_inset
+
+ and produces a 
+\series bold
+distribution
+\series default
+ on actions 
+\begin_inset Formula $a\in\ca$
+\end_inset
+
+ :
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{matrix}\pi: & \cx & \rightarrow & \text{Distributions on }\ca\\
+\pause & x & \mapsto & \pi(a\mid x)
+\end{matrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Reward Function
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+A 
+\series bold
+reward function
+\series default
+ evaluates an action in the context of the input 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{matrix}r: & \ca\times\cx & \rightarrow & \reals\\
+\pause & (a,x) & \mapsto & r(a,x)
+\end{matrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Section
+SGD for CPMs vs REINFORCE
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Conditional Probability Modeling (CPM)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Input space 
+\begin_inset Formula $\cx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Label space 
+\begin_inset Formula $\cy$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Hypothesis space of functions 
+\begin_inset Formula $x\mapsto p(y\mid x;\theta)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Parameterized by 
+\begin_inset Formula $\theta\in\Theta$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+For any 
+\begin_inset Formula $\theta$
+\end_inset
+
+ and 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $p\left(y\mid x;\theta\right)$
+\end_inset
+
+ is a distribution on 
+\begin_inset Formula $\cy$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+(mathematically, no different from a policy)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Conditional Probability Modeling
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Given training set 
+\begin_inset Formula $\cd=\left((x_{1},y_{1}),\ldots,(x_{n},y_{n}\right)$
+\end_inset
+
+ iid from 
+\begin_inset Formula $P_{\cx\times\cy}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Maximum likelihood estimation for dataset
+\begin_inset Formula 
+\begin{eqnarray*}
+\theta & \in & \argmax_{\theta\in\Theta}\prod_{i=1}^{n}p(y_{i}\mid x_{i};\theta)\\
+\pause\iff\theta & \in & \argmax_{\theta\in\Theta}\sum_{i=1}^{n}\log\left[p(y_{i}\mid x_{i};\theta)\right]\pause
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Gradient Descent Steps
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Let's consider a standard SGD step for observation 
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+ in a conditional likelihood model.
+\begin_inset Formula 
+\[
+\pause\Delta\theta=\alpha\del_{\theta}\log p(y_{i}\mid x_{i},\theta)
+\]
+
+\end_inset
+
+for some learning rate 
+\begin_inset Formula $\alpha>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+In words: adjust 
+\begin_inset Formula $p(y_{i}\mid x_{i},\theta)$
+\end_inset
+
+ to put more probability mass on 
+\series bold
+correct output
+\series default
+ 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Reinforcement Learning Setting
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In reinforcement learning, we are not provided with the 
+\begin_inset Quotes eld
+\end_inset
+
+right answer
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ during training.
+\end_layout
+
+\begin_deeper
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+We get input 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+We take a random action by sampling 
+\begin_inset Formula $y\sim p(y\mid x_{i};\theta)$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+We get reward 
+\begin_inset Formula $r(y,x_{i})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+We want to adjust 
+\begin_inset Formula $\theta$
+\end_inset
+
+ to increase the expected rewards we get.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The REINFORCE Update
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The REINFORCE update is as follows:
+\begin_inset Formula 
+\[
+\Delta\theta=\alpha r(y)\del_{\theta}\log p(y\mid x_{i},\theta),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $y$
+\end_inset
+
+ is sampled randomly from 
+\begin_inset Formula $p(y\mid x_{i},\theta)$
+\end_inset
+
+, the policy for 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Compare to MLE step: 
+\begin_inset Formula 
+\[
+\Delta\theta=\alpha\del_{\theta}\log p(y_{i}\mid x_{i},\theta),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ is the label corresponding 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+In maximum likelihood, we're making the correct action more likely.
+\end_layout
+
+\begin_layout Itemize
+In REINFORCE, we're making actions with big rewards relatively more likely
+ than those with small rewards.
+\begin_inset Note Note
+status open
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Seems like a reasonable thing to do...
+ how to motivate more formally? 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Deriving REINFORCE
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Formalize our Problem Setting
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We assume the following data generating distributions:
+\begin_inset Formula 
+\begin{eqnarray*}
+\text{input }x & \sim & P_{x}\\
+\text{action }a|x & \sim & \pi_{\theta}(\cdot\mid x)\\
+\text{reward }r\mid a,x & \sim & P_{r\mid a,x}
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+In general, 
+\begin_inset Formula $P_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $P_{r\mid a,x}$
+\end_inset
+
+ are known.
+\end_layout
+
+\begin_layout Itemize
+We know the 
+\series bold
+policy
+\series default
+ 
+\begin_inset Formula $\pi_{\theta}(\cdot\mid x)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+gives action distribution conditioned on input 
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+We want to find 
+\begin_inset Formula $\theta$
+\end_inset
+
+ giving a policy that maximizes 
+\begin_inset Formula $J(\theta)=\ex_{\theta}\left[r\right].$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Work the Objective Function
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Suppose we have a discrete action space: 
+\begin_inset Formula 
+\begin{eqnarray*}
+J(\theta) & = & \ex_{\theta}[r]\\
+\pause & = & \ex^{x}\left[\ex_{\theta}^{a}\left[\ex\left[r\mid a,x\right]\mid x\right]\right]\\
+ & = & \ex^{x}\left[\sum_{a\in\ca}\pi_{\theta}(a\mid x)\ex\left[r\mid a,x\right]\right]\pause
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+And now we take the gradient...
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Clever Trick
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+But first a clever trick:
+\begin_inset Formula 
+\begin{eqnarray*}
+\del_{\theta}\log\pi_{\theta}(a\mid x) & \pause= & \frac{\del_{\theta}\pi_{\theta}(a\mid x)}{\pi_{\theta}\left(a\mid x\right)}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Rearranging, we get
+\begin_inset Formula 
+\begin{eqnarray*}
+\del_{\theta}\pi_{\theta}(a\mid x) & = & \pi_{\theta}\left(a\mid x\right)\del_{\theta}\log\pi_{\theta}(a\mid x)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Gradient of Objective Function
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Clever trick: 
+\begin_inset Formula $\del_{\theta}\pi_{\theta}(a\mid x)=\pi_{\theta}\left(a\mid x\right)\del_{\theta}\log\pi_{\theta}(a\mid x)\pause$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+For a given 
+\begin_inset Formula $\theta$
+\end_inset
+
+, we want to find direction to increase 
+\begin_inset Formula $J(\theta)$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\del_{\theta}J(\theta) & = & \del_{\theta}\ex^{x}\left[\sum_{a\in\ca}\pi_{\theta}(a\mid x)\ex\left[r\mid a,x\right]\right]\\
+\pause & = & \ex^{x}\left[\sum_{a\in\ca}\del_{\theta}\left[\pi_{\theta}(a\mid x)\right]\ex\left[r\mid a,x\right]\right]\\
+\pause & = & \ex^{x}\left[\sum_{a\in\ca}\pi_{\theta}(a\mid x)\del_{\theta}\left[\log\pi_{\theta}(a\mid x)\right]\ex\left[r\mid a,x\right]\right]\text{ (clever trick)}\\
+\pause & = & \ex^{x}\left[\ex_{\theta}^{a}\left(\del_{\theta}\left[\log\pi_{\theta}(a\mid x)\right]\ex^{r}\left[r\mid a,x\right]\right)\right]\text{ (payoff of clever trick)}\\
+\pause & = & \ex_{\theta}^{x,a}\left[\ex^{r}\left[r\del_{\theta}\left[\log\pi_{\theta}(a\mid x)\right]\mid a,x\right]\right]\\
+\pause & = & \ex_{\theta}^{x,a,r}\left[r\del_{\theta}\left[\log\pi_{\theta}(a\mid x)\right]\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Monte Carlo Approximation to the Gradient
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+So we have the gradient w.r.t.
+ the policy:
+\begin_inset Formula 
+\[
+\del_{\theta}J(\theta)=\ex_{\theta}^{x,a,r}\left[r\del_{\theta}\left[\log\pi_{\theta}(a\mid x)\right]\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+How do we evaluate this?
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Let's use a Monte Carlo approximation to the gradient:
+\begin_inset Formula 
+\begin{eqnarray*}
+\del_{\theta}J(\theta) & = & \ex_{\theta}^{x,a,r}\left[r\del_{\theta}\left[\log\pi_{\theta}(a\mid x)\right]\right]\\
+\pause & \approx & \frac{1}{N}\sum_{i=1}^{N}r_{i}\del_{\theta}\left[\log\pi_{\theta}(a_{i}\mid x_{i})\right]
+\end{eqnarray*}
+
+\end_inset
+
+ for 
+\begin_inset Formula $\left(x_{1},a_{1},r_{1}\right),\ldots,\left(x_{N},a_{N},r_{N}\right)$
+\end_inset
+
+ a sample of 
+\begin_inset Formula $N$
+\end_inset
+
+ rounds with the same policy 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+As we do with SGD, we often take 
+\begin_inset Formula $N=1$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Approximation is Unbiased, but Variance?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Note that our approximation 
+\begin_inset Formula 
+\[
+\frac{1}{N}\sum_{i=1}^{N}r_{i}\del_{\theta}\left[\log\pi_{\theta}(a_{i}\mid x_{i})\right]
+\]
+
+\end_inset
+
+has expectation 
+\begin_inset Formula 
+\[
+\ex_{\theta}^{x,a,r}\left[r\del_{\theta}\left[\log\pi_{\theta}(a\mid x)\right]\right]\pause=\del_{\theta}J(\theta)\pause
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+So we have an unbiased estimate of the gradient.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+However, it turns out that it can have 
+\begin_inset Quotes eld
+\end_inset
+
+high variance.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+(
+\begin_inset Quotes eld
+\end_inset
+
+high variance
+\begin_inset Quotes erd
+\end_inset
+
+ is in quotes because the gradient is a vector)
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Later we'll apply some tricks to control the variance, which is necessary
+ in practice.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+REINFORCE = Monte Carlo Policy Gradient
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+REINFORCE algorithm
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Initialize policy 
+\begin_inset Formula $\theta=\theta_{0}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Repeat:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Play 
+\begin_inset Formula $N$
+\end_inset
+
+ rounds with policy 
+\begin_inset Formula $\theta$
+\end_inset
+
+, giving 
+\begin_inset Formula $\left(x_{1},a_{1},r_{1}\right),\ldots,\left(x_{N},a_{N},r_{N}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Increment 
+\begin_inset Formula $\theta$
+\end_inset
+
+ by 
+\begin_inset Formula 
+\[
+\theta\gets\theta+\alpha\left[\frac{1}{N}\sum_{i=1}^{N}r_{i}\del_{\theta}\left[\log\pi_{\theta}(a_{i}\mid x_{i})\right]\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Binary Classification Example
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example: Binary Classification with 
+\begin_inset Formula $0/1$
+\end_inset
+
+ Loss
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Can we map hard classification into this framework?
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\text{input }x & \sim & P_{x}\\
+\text{label }y\mid x & \sim & P_{y\mid x}\\
+\text{reward }r\mid a,y & \sim & \ind{a=y}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+We'd like to optimize
+\begin_inset Formula 
+\begin{eqnarray*}
+\ex_{\theta}\left[r\right] & = & \ex^{x,y}\left[\ex_{\theta}^{r}[r\mid x,y]\right]\\
+ & = & \ex^{x,y}\left[\sum_{a\in\left\{ 0,1\right\} }\pi_{\theta}(a\mid x)\ind{a=y}\right]\\
+ & = & \ex^{x,y}\left[\pi_{\theta}(y\mid x)\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Plain Layout
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example: Binary Classification with 
+\begin_inset Formula $0/1$
+\end_inset
+
+ Loss
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Let's consider the RL version of binary classification with 
+\begin_inset Formula $0/1$
+\end_inset
+
+ loss:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+World gives us input 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+We choose action 
+\begin_inset Formula $a\in\left\{ 0,1\right\} $
+\end_inset
+
+ by sampling from policy 
+\begin_inset Formula $\pi_{\theta}\left(a\mid x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+World reveals 
+\begin_inset Formula $y$
+\end_inset
+
+ and gives us reward 
+\begin_inset Formula $r(a,y)=\ind{a=y}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Compare that to the standard ML version:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+World gives us input 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+We choose action 
+\begin_inset Formula $a\in\left\{ 0,1\right\} $
+\end_inset
+
+ according to prediction function 
+\begin_inset Formula $f:x\mapsto a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+World reveals 
+\begin_inset Formula $y$
+\end_inset
+
+ and we incur loss 
+\begin_inset Formula $\ell(a,y)=\ind{a\neq y}.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+hardclassificWe'd like to optimize
+\begin_inset Formula 
+\[
+\ex_{\theta}\left[r\right]=\ex^{x,y}\left[\sum_{a\in\left\{ 0,1\right\} }\pi_{\theta}(a\mid x)\ind{a=y}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Introduce our policy class parameterized by 
+\begin_inset Formula $\theta$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\pi_{\theta}(a\mid x) & = & \begin{cases}
+f(\theta^{T}x) & a=1\\
+1-f(\theta^{T}x) & a=0
+\end{cases},\\
+ & = & \left[f(\theta^{T}x)\right]^{a}\left[1-f(\theta^{T}x)\right]^{1-a}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $f$
+\end_inset
+
+ is some differentiable squashing function mapping into 
+\begin_inset Formula $\left(0,1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+(For example, 
+\begin_inset Formula $f$
+\end_inset
+
+ can be the logistic function 
+\begin_inset Formula $f(s)=1/\left(1+e^{-s}\right)$
+\end_inset
+
+.)
+\end_layout
+
+\end_deeper
+\begin_layout Plain Layout
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example: Binary Classification with 
+\begin_inset Formula $0/1$
+\end_inset
+
+ Loss
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+So
+\begin_inset Formula 
+\begin{eqnarray*}
+\ex_{\theta}\left[r\right] & = & \ex^{x,y}\left[\sum_{a\in\left\{ 0,1\right\} }\pi_{\theta}(a\mid x)\ind{a=y}\right]\\
+ & = & \ex^{x,y}\left[\sum_{a\in\left\{ 0,1\right\} }\pi_{\theta}(a\mid x)\ind{a=y}\right]\\
+ &  & \ex^{x,y}\left[\sum_{a\in\left\{ 0,1\right\} }\left[f(\theta^{T}x)\right]^{a}\left[1-f(\theta^{T}x)\right]^{1-a}\ind{a=y}\right]\\
+ & = & \ex^{x,y}\left[\left[1-f(\theta^{T}x)\right]\ind{y=0}+f(\theta^{T}x)\ind{y=1}\right]\\
+ & = & \ex^{x,y}\left[\left[1-f(\theta^{T}x)\right]\left(1-y\right)+f(\theta^{T}x)y\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+From here we can optimize by taking the gradient w.r.t.
+ 
+\begin_inset Formula $\theta$
+\end_inset
+
+...
+\end_layout
+
+\begin_layout Itemize
+But this looks kind of familiar.
+ The objective function for logistic regression is to maximize
+\begin_inset Formula 
+\[
+\ex^{x,y}\left[\left[1-\log f(\theta^{T}x)\right]\left(1-y\right)+\log f(\theta^{T}x)y\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+We know that the Bayes optimal solution to this objective function is for
+ 
+\begin_inset Formula $f(\theta^{T}x)$
+\end_inset
+
+ to give the probability of 
+\begin_inset Formula $y\mid x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+What's the Bayes optimal solution for the version without the log's?
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Reward Baseline
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Subtracting a Baseline from Reward
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Our objective function is
+\begin_inset Formula 
+\[
+J(\theta)=\ex_{\theta}\left(r\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Suppose we introduce a new reward function 
+\begin_inset Formula $r_{0}=r-b$
+\end_inset
+
+, for constant 
+\begin_inset Formula $b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Then 
+\begin_inset Formula 
+\[
+J_{0}(\theta)=\ex_{\theta}(r_{0})=\ex_{\theta}\left(r\right)-b.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Obviously, 
+\begin_inset Formula $J(\theta$
+\end_inset
+
+) and 
+\begin_inset Formula $J_{0}(\theta)$
+\end_inset
+
+ have the same optimal 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+But they'll have different optimization paths.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Can certain 
+\begin_inset Formula $b$
+\end_inset
+
+ lead to better optimization paths?
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+We'll find that although the expected gradient step for a given 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is the same for every 
+\begin_inset Formula $b$
+\end_inset
+
+, the variance of that step can change a lot with 
+\begin_inset Formula $b$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Subtracting a Baseline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The increment to 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+\frac{\alpha}{N}\sum_{i=1}^{N}r_{i}\del_{\theta}\log\pi_{\theta}(a_{i}\mid x_{i}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Note that each summand 
+\begin_inset Formula $r_{i}\del_{\theta}\left[\log\pi_{\theta}(a_{i}\mid x_{i})\right]$
+\end_inset
+
+ is random.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+We will show that subtracting a 
+\series bold
+baseline
+\series default
+ 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ from the reward doesn't change the EV:
+\begin_inset Formula 
+\begin{eqnarray*}
+\ex\left[\left(r_{i}-b_{i}\right)\del_{\theta}\left[\log\pi_{\theta}(a_{i}\mid x_{i})\right]\right] & = & \ex\left[r_{i}\del_{\theta}\log\pi_{\theta}(a_{i}\mid x_{i})\right]-b_{i}\underbrace{\ex\left[\del_{\theta}\log\pi_{\theta}(a_{i}\mid x_{i})\right]}_{=0}=\pause\\
+ & = & \ex\left[r_{i}\del_{\theta}\log\pi_{\theta}(a_{i}\mid x_{i})\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+To show: 
+\begin_inset Formula 
+\[
+\ex\left[\del_{\theta}\log\pi_{\theta}(a_{i}\mid x_{i})\right]=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Zero Expectation Step
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Let 
+\begin_inset Formula $p_{\theta}(a)$
+\end_inset
+
+ be a distribution on 
+\begin_inset Formula $a$
+\end_inset
+
+, parameterized by 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Then 
+\begin_inset Formula $\ex\left[\del_{\theta}\log p_{\theta}(a)\right]=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Proof:
+\series default
+ (for case that 
+\begin_inset Formula $a$
+\end_inset
+
+ is discrete)
+\begin_inset Formula 
+\begin{eqnarray*}
+\ex\left[\del_{\theta}\log p_{\theta}(a)\right] & = & \ex\left[\frac{\del_{\theta}p_{\theta}(a)}{p_{\theta}(a)}\right]\\
+\pause & = & \sum_{a\in\ca}p_{\theta}(a)\left[\frac{\del_{\theta}p_{\theta}(a)}{p_{\theta}(a)}\right]\\
+\pause & = & \sum_{a\in\ca}\del_{\theta}p_{\theta}(a)\\
+\pause & = & \del_{\theta}\left[\sum_{a\in\ca}p_{\theta}(a)\right]\\
+\pause & = & \del_{\theta}\left[1\right]\pause=0
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Zero Expectation Step
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+So 
+\begin_inset Formula 
+\begin{eqnarray*}
+\ex\left[\del_{\theta}\log\pi_{\theta}(a_{i}\mid x_{i})\right] & \pause= & \ex^{x_{i}}\left[\ex^{a_{i}}\left[\del_{\theta}\log\pi_{\theta}(a_{i}\mid x_{i})\mid x_{i}\right]\right]\\
+\pause & = & \ex^{x_{i}}\left[0\right]=0.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+This completes the proof that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\ex\left[\left(r_{i}-b_{i}\right)\del_{\theta}\left[\log\pi_{\theta}(a_{i}\mid x_{i})\right]\right] & = & \ex\left[r_{i}\del_{\theta}\log\pi_{\theta}(a_{i}\mid x_{i})\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+So, the expected step is independent of baseline 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+What to use for the baseline?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We're summing random vectors of the form
+\begin_inset Formula 
+\[
+\left(r_{i}-b_{i}\right)\del_{\theta}\left[\log\pi_{\theta}(a_{i}\mid x_{i})\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Each is an unbiased estimate of 
+\begin_inset Formula $\del_{\theta}J(\theta)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+But we're told to worry about 
+\begin_inset Quotes eld
+\end_inset
+
+high variance.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+But what is the 
+\begin_inset Quotes eld
+\end_inset
+
+variance
+\begin_inset Quotes erd
+\end_inset
+
+? 
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+First, note that this expression is generally a 
+\series bold
+vector
+\series default
+.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+So there is no scalar 
+\begin_inset Quotes eld
+\end_inset
+
+variance
+\begin_inset Quotes erd
+\end_inset
+
+ we can just try to optimize.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+So raise your eyebrows if you see a derivation of the 
+\begin_inset Formula $b$
+\end_inset
+
+ that gives 
+\begin_inset Quotes eld
+\end_inset
+
+minimal variance.
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+I haven't found a good formal treatment of this.
+ (Though may exist.)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Let's try to get a little bit of intuition at least...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+How to choose the baseline 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ in 
+\begin_inset Formula $\left(r_{i}-b_{i}\right)\del_{\theta}\left[\log\pi_{\theta}(a_{i}\mid x_{i})\right]$
+\end_inset
+
+?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Let 
+\begin_inset Formula $g_{ij}=\left(\del_{\theta}\left[\log\pi_{\theta}(a_{i}\mid x_{i})\right]\right)_{j}$
+\end_inset
+
+ be the 
+\begin_inset Formula $j$
+\end_inset
+
+th component of the gradient.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $g_{ij}$
+\end_inset
+
+ and 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ were independent (which they're NOT), then 
+\begin_inset Formula 
+\begin{eqnarray*}
+\var\left(\left(r_{i}-b_{i}\right)g_{ij}\right) & \pause= & \left[\ex\left(r_{i}-b_{i}\right)\right]^{2}\var\left(g_{ij}\right)+\left[\underbrace{\ex g_{ij}}_{=0}\right]^{2}\var(r_{i})+\var(r_{i})\var(g_{ij})\\
+ & \pause= & \left[\ex r_{i}-b_{i}\right]^{2}\var\left(g_{ij}\right)+\var(r_{i})\var(g_{ij}).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We can write
+\begin_inset Formula 
+\begin{eqnarray*}
+\var\left(\left(r_{i}-b_{i}\right)g_{i,j}\right) & = & \ex\left[\var\left(\left(r_{i}-b_{i}\right)g_{i,j}\mid r_{i}\right)\right]+\var\left(\ex\left[\left(r_{i}-b_{i}\right)g_{i,j}\mid r_{i}\right]\right)\\
+ & = & \ex\left[\left(r_{i}-b_{i}\right)^{2}\var\left(g_{i,j}\mid r_{i}\right)\right]+\var\left(\left(r_{i}-b_{i}\right)\ex\left[g_{i,j}\mid r_{i}\right]\right)\\
+ & = & \ex\left[\left(r_{i}-b_{i}\right)^{2}\var\left(g_{i,j}\mid r_{i}\right)\right]+\var\left(\left(r_{i}-b_{i}\right)\ex\left[g_{i,j}\mid r_{i}\right]\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+So choosing 
+\begin_inset Formula $b_{i}\approx\ex r_{i}$
+\end_inset
+
+ seems like a good thing to do.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Can estimate 
+\begin_inset Formula $\ex r_{i}$
+\end_inset
+
+ e.g.
+ by using historical rewards.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Input-Dependent Baselines
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+What if we generally get lower rewards 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ for some inputs 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ than others?
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Can we have the baseline 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ depend on the input 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Yes!
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+You can go back through our argument and change all the expectations to
+ expectations conditional on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and you will see that we still get unbiased estimates when we use a function
+ 
+\begin_inset Formula $b_{i}=b(x_{i})$
+\end_inset
+
+ as a baseline.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Learning the Baseline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+One can actually try to learn to predict the reward for a given input 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, as a baseline.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+We can learn it at the same time as we learn our policy.
+ 
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+We could use 
+\begin_inset Formula $b_{\phi}(x)$
+\end_inset
+
+ as a baseline, where 
+\begin_inset Formula $\phi$
+\end_inset
+
+ is learned to minimize 
+\begin_inset Formula $\left(r_{i}-b_{\phi}(x_{i})\right)^{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+This is the approach suggested in Sutton's book.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Self-Critical Baseline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Here's another clever way to set a baseline:
+\end_layout
+
+\begin_layout Itemize
+Find (or approximate) the action that is optimal under our policy:
+\begin_inset Formula 
+\[
+a_{i}^{*}\approx\argmax_{a}\pi_{\theta}(a|x_{i}),
+\]
+
+\end_inset
+
+and then use the reward 
+\begin_inset Formula $r(a_{i}^{*})$
+\end_inset
+
+ as a baseline.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Intuition is that, if the current action performs better than the action
+ our policy says is best, then we should make the current action more likely.
+ 
+\end_layout
+
+\begin_layout Itemize
+But if it performs worse than what are policy says is best, let's make it
+ less likely.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+A reasonable idea and seems to performs well in practice (at least for sequence
+ prediction).
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Section
+REINFORCE for Sequence Prediction
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Application: Sequence-to-Sequence Models
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Consider machine translation.
+\end_layout
+
+\begin_layout Itemize
+e.g.
+ Conditioned on sentence in English, produce a distribution on sentences
+ in French.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Model is 
+\begin_inset Formula $\pi_{\theta}(y\mid x)$
+\end_inset
+
+, where 
+\begin_inset Formula $x$
+\end_inset
+
+ is an English sentence and 
+\begin_inset Formula $y$
+\end_inset
+
+ is a French sentence.
+ 
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+This is typically trained as a conditional probability model using maximum
+ likelihood.
+\end_layout
+
+\begin_layout Itemize
+As usual, that means finding
+\begin_inset Formula 
+\[
+\theta^{*}=\argmin_{\theta}\pi_{\theta}(y\mid x).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Seems reasonable...
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+But how do we actually measure performance for machine translation?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Application: Sequence-to-Sequence Models
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Suppose we are assessing performance of our MT model on a test set.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+We get input 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+We run beam search with our current model 
+\begin_inset Formula $\pi_{\theta}(y\mid x)$
+\end_inset
+
+ and produce a sequence 
+\begin_inset Formula $y'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Suppose 
+\begin_inset Formula $y'$
+\end_inset
+
+ is a perfect translation of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, but it's different from the gold sequence 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+We'd like to give credit for this translation.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+I don't think there's a great way to do this in an automated way.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+But there is BLEU score
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+A frequent measure of translation quality is BLEU score.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Let's not discuss the details of BLEU score.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+For our purposes, sufficient to know that 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+BLEU takes a proposed translation and a ground truth and gives a numerical
+ score
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+BLEU score is computed by an algorithm and is 
+\series bold
+not differentiable.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Perhaps it would make sense to train a model to optimize directly for BLEU
+ score?
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+We can use REINFORCE for that.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Exposure Bias
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Our sequence models are all 
+\series bold
+autoregressive
+\series default
+.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+We condition on tokens previously predicted tokens to predict the next token.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+During max likelihood training, we're always conditioning on the gold label.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+During test, we're conditioning on a predicted label.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Our model never trains using its own predictions as input.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Exposure Bias
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This is a known issue with maximum likelhood training of sequence models.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+There is a family of approaches called 
+\begin_inset Quotes eld
+\end_inset
+
+learning to search
+\begin_inset Quotes erd
+\end_inset
+
+ that address this issue.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+e.g.
+ SEARN, DAgger, AggreVaTe, LOLS, etc.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+But RL addresses this approach as well...
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+We only condition on previous predictions during training.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+We don't even have the ground truth label to use, except as part of the
+ reward function.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Usually we pre-train with maximum likelihood
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Suppose we want to train seq2seq with BLEU score as reward.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Our version of REINFORCE is sufficient for this task.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+We could, for example, use the self-critical baseline.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+In practice, we usually pretrain our model with maximum likelihood, then
+ switch to RL.
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+However, we can get some insight, and perhaps provide some improvement,
+ if we unpack this problem a bit more.
+\end_layout
+
+\begin_layout Itemize
+Next we'll take one more step towards the standard reinforcement learning
+ setting, called 
+\begin_inset Quotes eld
+\end_inset
+
+episodic RL
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Image to Sequence
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Image to Sequence Problems
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /Users/drosen/Dropbox/repos/mlcourse/Figures/reinforcement-learning/image-captioning/dataset_example.pdf
+	height 80pheight%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+How to Evaluate?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Re-render for exact match
+\end_layout
+
+\begin_deeper
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Very challenging metric
+\end_layout
+
+\begin_layout Itemize
+Doesn't work for hand-drawn shapes
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Two specifications can be very different, yet render to very similar things.
+ (identifiability)
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Two images may look very different (e.g.
+ at the pixel level), but have similar specifications
+\end_layout
+
+\begin_deeper
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+e.g.
+ by changing a color
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+We can evaluate performance in image space and in specification space.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Image Space Measure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We can measure performance in image space with
+\begin_inset Formula 
+\[
+d_{img}=||I-\Psi(I^{R})||_{2}^{2},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $I$
+\end_inset
+
+ is the original image vector and 
+\begin_inset Formula $I^{R}$
+\end_inset
+
+ is the rendering of the predicted image.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Verify with Ram that i is a linear vectorization across all 3 color channels
+ for the abstract scene dataset
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+For the noisy shapes dataset, 
+\begin_inset Formula $\Psi$
+\end_inset
+
+ is a Gaussian blurring function.
+\end_layout
+
+\begin_layout Itemize
+For the abstract scene dataset, 
+\begin_inset Formula $\Psi$
+\end_inset
+
+ is identity function.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Why isn't this differentiable? 
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Computing 
+\begin_inset Formula $I^{R}$
+\end_inset
+
+ uses a graphics renderer...
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Though there are differentiable renderers now...
+ but that's another story.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Corresponding rewared is 
+\begin_inset Formula 
+\[
+r_{img}=\frac{c}{d_{img}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Specification Space Measure: IOU Reward
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Our specifications break down into 
+\begin_inset Quotes eld
+\end_inset
+
+objects
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+We can look for exact matches between prediction and ground truth at the
+ object level.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+For numeric attributes, we divide range into 20 bins of equal size
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+consider it a match if the bin is correct
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Can summarize matches with precision, recall, F1, etc.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+A common summary in this scenario is 
+\series bold
+intersection-over-union
+\series default
+ (IOU)....
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Intersection over Union
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Let 
+\begin_inset Formula $\{o_{i}\}_{i=1}^{m}$
+\end_inset
+
+ and 
+\begin_inset Formula $\{o_{j}^{*}\}_{j=1}^{n}$
+\end_inset
+
+ represent the objects in predicted and ground-truth specifications, respectivel
+y.
+ 
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Then the IOU reward is defined as follows:
+\begin_inset Formula 
+\[
+r_{iou}=\frac{\textrm{count}(\{o_{i}\}_{i=1}^{m}\cap\{o_{j}^{*}\}_{j=1}^{n})}{\textrm{count}(\{o_{i}\}_{i=1}^{m}\cup\{o_{j}^{*}\}_{j=1}^{n})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Roughly speaking, IOU gives credit for predicting objects that exactly match
+ objects in the ground truth
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Penalizes both for predicting objects that do not match ground truth objects
+ and for failing to predict objects that are part of the ground truth.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Our Model: ResNet to Transformer Decoder
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /Users/drosen/Dropbox/repos/mlcourse/Figures/reinforcement-learning/image-captioning/main_model.pdf
+	lyxscale 50
+	height 80pheight%
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Specification Space: Inference Reward
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Subsubsection
+Inference Reward
+\end_layout
+
+\end_deeper
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "inference-reward"
+
+\end_inset
+
+ Our second reward, which we call the 
+\begin_inset Quotes eld
+\end_inset
+
+inference reward
+\begin_inset Quotes erd
+\end_inset
+
+, is also a reward in specification space.
+ The name is based on the 
+\begin_inset Quotes eld
+\end_inset
+
+inference error
+\begin_inset Quotes erd
+\end_inset
+
+, which is a performance measure introduced in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcite
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+wu2017neural
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ for the Abstract Scenes dataset.
+ While IOU is based on exact matches between predicted objects and ground-truth
+ objects, the inference error and inference reward are based on the number
+ of properties (within objects) that correctly match the corresponding propertie
+s in the ground-truth.
+ We define the inference error as the fraction of predicted properties that
+ fail to match the corresponding ground-truth properties.
+ The inference reward is one minus the inference error.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Results: Cross-Entropy Loss (i.e.
+ Maximum Likelihood)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+
+\size small
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="none" valignment="top" width="0.8cm">
+<column alignment="none" valignment="top" width="0.5cm">
+<row>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Model
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Recons.
+ Error
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+IOU
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" usebox="none" special="c">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\shape smallcaps
+\size small
+Cross-Entropy Loss
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Image2LSTM+atten.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+15.70
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+32.06
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Image2Transformer
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+10.92
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+58.54
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+reconstruction error corresponds to the image distance
+\end_layout
+
+\begin_layout Itemize
+average error
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Results: Reinforcement Learning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+
+\size small
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="3">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="none" valignment="top" width="0.8cm">
+<column alignment="none" valignment="top" width="0.5cm">
+<row>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Model
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Recons.
+ Error
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+IOU
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" usebox="none" special="c">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\shape smallcaps
+\size small
+Cross-Entropy Loss
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Image2LSTM+atten.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+15.70
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+32.06
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Image2Transformer
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+10.92
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+58.54
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" usebox="none" special="c">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\shape smallcaps
+\size small
+Image2Transformer with Reinforce Loss
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+IOU Reward
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+10.50
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+61.29
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Recons.
+ Reward
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+9.99
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+62.44
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+IOU + Recons.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+10.04
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+62.45
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+
+\size small
+\begin_inset Tabular
+<lyxtabular version="3" rows="13" columns="5">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="none" valignment="top" width="0.8cm">
+<column alignment="none" valignment="top" width="0.8cm">
+<column alignment="none" valignment="top" width="0.8cm">
+<column alignment="none" valignment="top" width="0.5cm">
+<row>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Model
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Infer.
+ Error
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Recons.
+ Error
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Avg.
+ Error
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+IOU
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" usebox="none" special="c">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\shape smallcaps
+\size small
+Previous Work
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+CNN+LSTM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+45.31
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+41.38
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+43.84
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+NSD (full)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+42.74
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+21.55
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+32.14
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" usebox="none" special="c">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\shape smallcaps
+\size small
+Cross-Entropy Loss
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Image2LSTM+atten.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+17.27
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+15.70
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+16.48
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+32.06
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Image2Transformer
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+8.78
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+10.92
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+9.85
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+58.54
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" usebox="none" special="c">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\shape smallcaps
+\size small
+Image2Transformer with Reinforce Loss
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+IOU Reward
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+7.91
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+10.50
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+9.20
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+61.29
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Inference Reward
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+7.81
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+10.75
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+9.28
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+59.35
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Recons.
+ Reward
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+8.34
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+9.99
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+9.16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+62.44
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Inference + Recons.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+8.21
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+10.12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+9.16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+61.54
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+IOU + Recons.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+8.05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+10.04
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+9.04
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+62.45
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Full Reinforcement Learning Setting
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Markov Decision Processes (Sutton Chapter 3)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Learner / decision maker is called the 
+\series bold
+agent
+\end_layout
+
+\begin_layout Itemize
+Agent interacts with the 
+\series bold
+environment
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Each time step 
+\begin_inset Formula $t=0,1,2,3,\ldots$
+\end_inset
+
+, 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+agent receives a state 
+\begin_inset Formula $s_{t}\in\cs$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+agent selects an action 
+\begin_inset Formula $a_{t}\in\ca$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+agent receives a numerical reward 
+\begin_inset Formula $r_{t+1}\in\reals$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+We get a 
+\series bold
+trajectory
+\series default
+: 
+\begin_inset Formula $s_{0},a_{0},r_{1},s_{1},a_{1},r_{2},s_{2},a_{2},\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+MDPs, continued
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The 
+\series bold
+dynamics
+\series default
+ of the MDP are given by the conditional probability distribution:
+\begin_inset Formula 
+\[
+p(s_{t},r_{t}\mid s_{t-1},a_{t-1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Gives distribution of reward and next state given previous state and action.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+p(s',r\mid s,a):=\pr\left(S_{t}=s',R_{t}=r\mid S_{t-1}=s,A_{t-1}=a\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+This conditional distribution completely characterizes the MDP.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+The dynamics describe how the world evolves and reacts to our actions.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Says nothing about what our actions are.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Episodic Learning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Often problem breaks up into 
+\begin_inset Quotes eld
+\end_inset
+
+
+\series bold
+episodes
+\series default
+
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+
+\series bold
+trials
+\series default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Sometimes we get a single reward at the end of each episode
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+as in sequence prediction
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+But now we'll consider the general case.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+For an episode there is a final time step 
+\begin_inset Formula $T$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+need not be the same in every episode
+\end_layout
+
+\begin_layout Itemize
+it's typically random
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+REINFORCE for this setting
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Define the 
+\series bold
+reward to go
+\series default
+ as rewards received after action 
+\begin_inset Formula $a_{t}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+g_{t}=\sum_{i=t+1}^{T}r_{i}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Then gradient step for this setting is approximated by
+\begin_inset Formula 
+\begin{eqnarray*}
+\del_{\theta}J(\theta) & \approx & \frac{1}{N}\sum_{i=1}^{N}\left[\sum_{t=1}^{T}g_{t}\del\log\left[\pi_{\theta}(a_{i,t}\mid s_{i,t})\right]\right].
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+If we only get reward at end of episode, then 
+\begin_inset Formula $g_{1}=\cdots=g_{T}=r$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Reduces to our case earlier.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+What's the impact?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Compare 
+\begin_inset Formula 
+\begin{eqnarray*}
+\del_{\theta}J(\theta) & \approx & \frac{1}{N}\sum_{i=1}^{N}\left[\sum_{t=1}^{T}\left(\sum_{j=t+1}^{T}r_{ij}\right)\del\log\left[\pi_{\theta}(a_{i,t}\mid s_{i,t})\right]\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+to 
+\begin_inset Formula 
+\begin{eqnarray*}
+\del_{\theta}J(\theta) & \approx & \frac{1}{N}\sum_{i=1}^{N}\left[\sum_{t=1}^{T}\left(\sum_{j=1}^{T}r_{ij}\right)\del\log\left[\pi_{\theta}(a_{i,t}\mid s_{i,t})\right]\right].
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Note that the reward to go 
+\begin_inset Formula $\left(\sum_{j=t+1}^{T}r_{ij}\right)$
+\end_inset
+
+ will typically be smaller than the full reward.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Thus we can view this variation as a variation reduction technique!
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+This is the form derived in Sutton and Barto's Chapter 13.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Section
+Misc Simple Math for Later
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Two Simple Facts
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Fact
+If 
+\begin_inset Formula $\ex X=0$
+\end_inset
+
+, then 
+\begin_inset Formula $\ex XY=\ex X(Y-b)$
+\end_inset
+
+, for any constant 
+\begin_inset Formula $b\in\reals$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Fact
+If 
+\begin_inset Formula $p(y;\theta)$
+\end_inset
+
+ is a distribution over 
+\begin_inset Formula $y$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+\sum_{y\in\cy}\frac{\partial}{\partial\theta_{i}}p(y;\theta)=0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Plain Layout
+Proof: 
+\begin_inset Formula $\sum_{y\in\cy}p(y;\theta)=1.$
+\end_inset
+
+ Then differentiate both sides.
+ 
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
